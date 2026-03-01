@@ -27,8 +27,16 @@
     .gallery .photos{display:flex;flex-direction:column;gap:12px;margin-top:12px}
     .gallery .photo img{width:320px;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 6px 18px rgba(10,10,30,.06);display:block}
     aside{position:sticky;top:20px}
-    @media (max-width:880px){main{grid-template-columns:1fr;} aside{position:static} .wrap{width:94vw}}
+    @media (max-width:880px){
+      main{grid-template-columns:1fr;} 
+      aside{position:static}
+      .wrap{width:94vw}
+      header{flex-direction:column;align-items:center}
+      .timerWrap{align-items:center}
+    }
     @media (max-width:520px){
+      header{flex-direction:column;align-items:center}
+      .timerWrap{align-items:center}
       .gallery .photos{flex-direction:row;flex-wrap:wrap}
       .gallery .photo img{width:48%;height:160px}
       .gallery .photo img{max-width:100%}
