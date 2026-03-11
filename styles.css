@@ -1,0 +1,40 @@
+:root { --bg:#f7f7fb; --card:#fff; --accent:#ff6b81; --muted:#6b7280; }
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#fff)}
+.wrap{width:60vw;max-width:980px;margin:28px auto;padding:20px}
+header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+h1{font-size:28px;margin:0;color:var(--accent)}
+.timerWrap{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.timer{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 8px 30px rgba(10,10,40,.06);display:flex;align-items:center;gap:14px}
+.messageInline{margin-top:8px}
+.count{font-weight:700;font-size:20px}
+.sub{color:var(--muted);font-size:14px}
+main{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:18px;align-items:start}
+.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(20,20,40,.04)}
+aside{position:relative}
+aside .card{padding:12px}
+.poem h2,.message h2,.gallery h2{margin:0 0 12px;font-size:16px;color:#222}
+.poem{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.poem .preview{white-space:pre-wrap;font-size:18px;color:#222;max-width:640px;text-align:center;line-height:1.45}
+.controls{display:flex;gap:8px;margin-top:10px}
+textarea{width:100%;min-height:120px;padding:10px;border-radius:8px;border:1px solid #e6e9ef;font-size:15px}
+.gallery .photos{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.gallery .photo img{width:320px;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 6px 18px rgba(10,10,30,.06);display:block}
+/* badges styling */
+.badges .badge img{width:320px;height:auto;object-fit:contain;border-radius:8px;box-shadow:0 6px 18px rgba(10,10,30,.06);display:block}
+.badges .desc{margin-top:6px;text-align:center;color:var(--muted);font-size:14px}
+aside{position:sticky;top:20px}
+@media (max-width:880px){
+  main{grid-template-columns:1fr;} 
+  aside{position:static}
+  .wrap{width:94vw}
+  header{flex-direction:column;align-items:center}
+  .timerWrap{align-items:center}
+}
+@media (max-width:520px){
+  header{flex-direction:column;align-items:center}
+  .timerWrap{align-items:center}
+  .gallery .photos{flex-direction:row;flex-wrap:wrap}
+  .gallery .photo img{width:48%;height:160px}
+  .gallery .photo img{max-width:100%}
+}
+@media (max-width:880px){main{grid-template-columns:1fr;}}
